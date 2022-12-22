@@ -3,6 +3,10 @@ import Combine
 
 final class APIClient: APIClientType {
     
+#warning("Should be injected instead of being Singleton")
+    static let shared = APIClient()
+    private init(){}
+    
     private var cancellationToken: AnyCancellable?
     
     func cancel() {

@@ -15,14 +15,13 @@ class RequestBuilder {
     private var withAuthentication : Bool = false
     
     // MARK: - Initializers
-    init(networkMethod: NetworkMethod, hostAddress: String = "127.0.0.1", path: String) {
-        self.httpScheme = "http"
+    init(networkMethod: NetworkMethod, hostAddress: String = "dummyapi.io", path: String) {
+        self.httpScheme = "https"
         self.hostAddress = hostAddress
         self.httpMethod = networkMethod
         components.scheme = self.httpScheme
         components.host = self.hostAddress
-        components.path = path
-        components.port = 5000
+        components.path = "/data/v1"+path
     }
     
     @discardableResult
@@ -105,8 +104,8 @@ class RequestBuilder {
         }
         
         if withAuthentication {
-            let accessToken = ""
-                urlRequest.setValue("Bearer \(accessToken)", forHTTPHeaderField: "Authorization")
+#warning("Should not store secrets on-device")
+            urlRequest.setValue("6384b8ee394ee23c54fb9ffb", forHTTPHeaderField: "app-id")
         }
         
         if let modelData = httpBodyModelData {
