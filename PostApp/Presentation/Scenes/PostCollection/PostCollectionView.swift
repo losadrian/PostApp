@@ -79,7 +79,9 @@ extension PostCollectionView: UICollectionViewDataSource {
 
 extension PostCollectionView: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        let postAtIndexPath = viewModel.posts[indexPath.row]
+        let postDetailsView = PostDetailsView(selectedPost: postAtIndexPath)
+        present(postDetailsView, animated: true)
     }
 }
 

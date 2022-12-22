@@ -18,9 +18,11 @@ final class PostCollectionViewCell: UICollectionViewCell {
         style()
     }
     
-    func configureCell(postPictureImageUrl: String, commentText: String, dateOfpublish: String) {
+    func configureCell(postPictureImageUrl: String, commentText: String, dateOfpublish: Date) {
         commentTextLabel.text = commentText
-        dateOfpublishLabel.text = dateOfpublish
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy"
+        dateOfpublishLabel.text = dateFormatter.string(from: dateOfpublish)
         postPictureImageView.loadImage(from: postPictureImageUrl)
     }
 }

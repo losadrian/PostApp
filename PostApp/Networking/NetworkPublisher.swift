@@ -16,6 +16,9 @@ struct NetworkPublisher {
                     if let encodableOutputData = String(data: output.data, encoding: .utf8) {
                         NSLog(" - Response json: - \n\(encodableOutputData)")
                         do {
+                            let dateFormatter = DateFormatter()
+                            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+                            decoder.dateDecodingStrategy = .formatted(dateFormatter)
                             let parsedJSON = try decoder.decode(T.self, from: output.data)
                             NSLog("\n - Parsed json: - \n\(parsedJSON)")
                         } catch {
