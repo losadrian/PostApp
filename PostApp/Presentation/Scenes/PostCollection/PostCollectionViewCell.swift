@@ -2,7 +2,7 @@ import UIKit
 
 final class PostCollectionViewCell: UICollectionViewCell {
     
-    private var postPictureImageView: UIImageView = .init(frame: .zero)
+    private var postPictureImageView: AsyncUIImageView = .init(frame: .zero)
     private var commentTextLabel: UILabel = .init(frame: .zero)
     private var dateOfpublishLabel: UILabel = .init(frame: .zero)
     
@@ -21,7 +21,7 @@ final class PostCollectionViewCell: UICollectionViewCell {
     func configureCell(postPictureImageUrl: String, commentText: String, dateOfpublish: String) {
         commentTextLabel.text = commentText
         dateOfpublishLabel.text = dateOfpublish
-        postPictureImageView.backgroundColor = .red
+        postPictureImageView.loadImage(from: postPictureImageUrl)
     }
 }
 

@@ -27,6 +27,7 @@
 		985302F7295462BC00F7BAFD /* PostCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985302F6295462BC00F7BAFD /* PostCollectionViewModel.swift */; };
 		985302F9295465E000F7BAFD /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985302F8295465E000F7BAFD /* PostCollectionViewCell.swift */; };
 		985302FC2954662800F7BAFD /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985302FB2954662800F7BAFD /* ReusableView.swift */; };
+		985302FF29546EA200F7BAFD /* AsyncUIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985302FE29546EA200F7BAFD /* AsyncUIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		985302F6295462BC00F7BAFD /* PostCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewModel.swift; sourceTree = "<group>"; };
 		985302F8295465E000F7BAFD /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		985302FB2954662800F7BAFD /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		985302FE29546EA200F7BAFD /* AsyncUIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncUIImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				985302C92954535300F7BAFD /* Scenes */,
+				985302FD29546E7A00F7BAFD /* SharedViewsStyles */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -187,6 +190,14 @@
 				985302FB2954662800F7BAFD /* ReusableView.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		985302FD29546E7A00F7BAFD /* SharedViewsStyles */ = {
+			isa = PBXGroup;
+			children = (
+				985302FE29546EA200F7BAFD /* AsyncUIImageView.swift */,
+			);
+			path = SharedViewsStyles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +284,7 @@
 				985302DB2954541100F7BAFD /* PathBuilder.swift in Sources */,
 				985302E42954541100F7BAFD /* RequestBuilder.swift in Sources */,
 				985302F9295465E000F7BAFD /* PostCollectionViewCell.swift in Sources */,
+				985302FF29546EA200F7BAFD /* AsyncUIImageView.swift in Sources */,
 				985302E52954541100F7BAFD /* APIClient.swift in Sources */,
 				985302EE2954577D00F7BAFD /* OwnerApiModel.swift in Sources */,
 				985302E72954546700F7BAFD /* APIError.swift in Sources */,
