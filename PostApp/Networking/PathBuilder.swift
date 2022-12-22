@@ -10,7 +10,11 @@ class PathBuilder {
     }
     
     // MARK: - Path elements
-    
+    @discardableResult
+    func post() -> PathBuilder {
+        path.append("/post")
+        return self
+    }
     
     // MARK: - BUILD
     func build() -> String {

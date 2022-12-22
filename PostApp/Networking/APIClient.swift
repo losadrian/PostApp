@@ -11,3 +11,12 @@ final class APIClient: APIClientType {
         }
     }
 }
+
+// MARK: - PostRepository
+extension APIClient: PostRepository {
+    func getPosts(byPage page: Int, completion: @escaping (Result<[PostApiModel], Error>) -> Void) {
+        //TODO: missing network call
+    }
+    
+    
+}

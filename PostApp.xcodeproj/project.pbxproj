@@ -21,6 +21,9 @@
 		985302E72954546700F7BAFD /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985302E62954546700F7BAFD /* APIError.swift */; };
 		985302EA295454E700F7BAFD /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985302E9295454E700F7BAFD /* PostRepository.swift */; };
 		985302EC295456D800F7BAFD /* ErrorResponseApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985302EB295456D800F7BAFD /* ErrorResponseApiModel.swift */; };
+		985302EE2954577D00F7BAFD /* OwnerApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985302ED2954577D00F7BAFD /* OwnerApiModel.swift */; };
+		985302F02954579D00F7BAFD /* PostApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985302EF2954579D00F7BAFD /* PostApiModel.swift */; };
+		985302F2295457BD00F7BAFD /* PostListByPageResponseApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985302F1295457BD00F7BAFD /* PostListByPageResponseApiModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +43,9 @@
 		985302E62954546700F7BAFD /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		985302E9295454E700F7BAFD /* PostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepository.swift; sourceTree = "<group>"; };
 		985302EB295456D800F7BAFD /* ErrorResponseApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponseApiModel.swift; sourceTree = "<group>"; };
+		985302ED2954577D00F7BAFD /* OwnerApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerApiModel.swift; sourceTree = "<group>"; };
+		985302EF2954579D00F7BAFD /* PostApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostApiModel.swift; sourceTree = "<group>"; };
+		985302F1295457BD00F7BAFD /* PostListByPageResponseApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListByPageResponseApiModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +155,9 @@
 		985302D12954541100F7BAFD /* ApiModel */ = {
 			isa = PBXGroup;
 			children = (
+				985302F1295457BD00F7BAFD /* PostListByPageResponseApiModel.swift */,
+				985302EF2954579D00F7BAFD /* PostApiModel.swift */,
+				985302ED2954577D00F7BAFD /* OwnerApiModel.swift */,
 				985302EB295456D800F7BAFD /* ErrorResponseApiModel.swift */,
 			);
 			path = ApiModel;
@@ -235,14 +244,17 @@
 			files = (
 				985302B7295451DC00F7BAFD /* PostCollectionView.swift in Sources */,
 				985302EA295454E700F7BAFD /* PostRepository.swift in Sources */,
+				985302F02954579D00F7BAFD /* PostApiModel.swift in Sources */,
 				985302DC2954541100F7BAFD /* NetworkMethod.swift in Sources */,
 				985302DA2954541100F7BAFD /* APIClientType.swift in Sources */,
 				985302B3295451DC00F7BAFD /* AppDelegate.swift in Sources */,
 				985302B5295451DC00F7BAFD /* SceneDelegate.swift in Sources */,
+				985302F2295457BD00F7BAFD /* PostListByPageResponseApiModel.swift in Sources */,
 				985302EC295456D800F7BAFD /* ErrorResponseApiModel.swift in Sources */,
 				985302DB2954541100F7BAFD /* PathBuilder.swift in Sources */,
 				985302E42954541100F7BAFD /* RequestBuilder.swift in Sources */,
 				985302E52954541100F7BAFD /* APIClient.swift in Sources */,
+				985302EE2954577D00F7BAFD /* OwnerApiModel.swift in Sources */,
 				985302E72954546700F7BAFD /* APIError.swift in Sources */,
 				985302DD2954541100F7BAFD /* NetworkPublisher.swift in Sources */,
 			);
