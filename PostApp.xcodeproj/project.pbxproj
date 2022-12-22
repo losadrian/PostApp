@@ -12,6 +12,15 @@
 		985302B7295451DC00F7BAFD /* PostCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985302B6295451DC00F7BAFD /* PostCollectionView.swift */; };
 		985302BC295451DD00F7BAFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 985302BB295451DD00F7BAFD /* Assets.xcassets */; };
 		985302BF295451DD00F7BAFD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 985302BD295451DD00F7BAFD /* LaunchScreen.storyboard */; };
+		985302DA2954541100F7BAFD /* APIClientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985302CC2954541000F7BAFD /* APIClientType.swift */; };
+		985302DB2954541100F7BAFD /* PathBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985302CD2954541000F7BAFD /* PathBuilder.swift */; };
+		985302DC2954541100F7BAFD /* NetworkMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985302CF2954541100F7BAFD /* NetworkMethod.swift */; };
+		985302DD2954541100F7BAFD /* NetworkPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985302D02954541100F7BAFD /* NetworkPublisher.swift */; };
+		985302E42954541100F7BAFD /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985302D82954541100F7BAFD /* RequestBuilder.swift */; };
+		985302E52954541100F7BAFD /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985302D92954541100F7BAFD /* APIClient.swift */; };
+		985302E72954546700F7BAFD /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985302E62954546700F7BAFD /* APIError.swift */; };
+		985302EA295454E700F7BAFD /* PostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985302E9295454E700F7BAFD /* PostRepository.swift */; };
+		985302EC295456D800F7BAFD /* ErrorResponseApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985302EB295456D800F7BAFD /* ErrorResponseApiModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +31,15 @@
 		985302BB295451DD00F7BAFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		985302BE295451DD00F7BAFD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		985302C0295451DD00F7BAFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		985302CC2954541000F7BAFD /* APIClientType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClientType.swift; sourceTree = "<group>"; };
+		985302CD2954541000F7BAFD /* PathBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PathBuilder.swift; sourceTree = "<group>"; };
+		985302CF2954541100F7BAFD /* NetworkMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkMethod.swift; sourceTree = "<group>"; };
+		985302D02954541100F7BAFD /* NetworkPublisher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkPublisher.swift; sourceTree = "<group>"; };
+		985302D82954541100F7BAFD /* RequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		985302D92954541100F7BAFD /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		985302E62954546700F7BAFD /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		985302E9295454E700F7BAFD /* PostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostRepository.swift; sourceTree = "<group>"; };
+		985302EB295456D800F7BAFD /* ErrorResponseApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponseApiModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,7 @@
 			children = (
 				985302C6295452C200F7BAFD /* Application */,
 				985302C82954534500F7BAFD /* Presentation */,
+				985302CB295453E200F7BAFD /* Networking */,
 			);
 			path = PostApp;
 			sourceTree = "<group>";
@@ -102,6 +121,46 @@
 				985302B6295451DC00F7BAFD /* PostCollectionView.swift */,
 			);
 			path = PostCollection;
+			sourceTree = "<group>";
+		};
+		985302CB295453E200F7BAFD /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				985302D92954541100F7BAFD /* APIClient.swift */,
+				985302E62954546700F7BAFD /* APIError.swift */,
+				985302D02954541100F7BAFD /* NetworkPublisher.swift */,
+				985302CD2954541000F7BAFD /* PathBuilder.swift */,
+				985302D82954541100F7BAFD /* RequestBuilder.swift */,
+				985302D12954541100F7BAFD /* ApiModel */,
+				985302E8295454CF00F7BAFD /* NetWorkingProtocols */,
+				985302CE2954541000F7BAFD /* NetworkingEnums */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		985302CE2954541000F7BAFD /* NetworkingEnums */ = {
+			isa = PBXGroup;
+			children = (
+				985302CF2954541100F7BAFD /* NetworkMethod.swift */,
+			);
+			path = NetworkingEnums;
+			sourceTree = "<group>";
+		};
+		985302D12954541100F7BAFD /* ApiModel */ = {
+			isa = PBXGroup;
+			children = (
+				985302EB295456D800F7BAFD /* ErrorResponseApiModel.swift */,
+			);
+			path = ApiModel;
+			sourceTree = "<group>";
+		};
+		985302E8295454CF00F7BAFD /* NetWorkingProtocols */ = {
+			isa = PBXGroup;
+			children = (
+				985302CC2954541000F7BAFD /* APIClientType.swift */,
+				985302E9295454E700F7BAFD /* PostRepository.swift */,
+			);
+			path = NetWorkingProtocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,8 +234,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				985302B7295451DC00F7BAFD /* PostCollectionView.swift in Sources */,
+				985302EA295454E700F7BAFD /* PostRepository.swift in Sources */,
+				985302DC2954541100F7BAFD /* NetworkMethod.swift in Sources */,
+				985302DA2954541100F7BAFD /* APIClientType.swift in Sources */,
 				985302B3295451DC00F7BAFD /* AppDelegate.swift in Sources */,
 				985302B5295451DC00F7BAFD /* SceneDelegate.swift in Sources */,
+				985302EC295456D800F7BAFD /* ErrorResponseApiModel.swift in Sources */,
+				985302DB2954541100F7BAFD /* PathBuilder.swift in Sources */,
+				985302E42954541100F7BAFD /* RequestBuilder.swift in Sources */,
+				985302E52954541100F7BAFD /* APIClient.swift in Sources */,
+				985302E72954546700F7BAFD /* APIError.swift in Sources */,
+				985302DD2954541100F7BAFD /* NetworkPublisher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
