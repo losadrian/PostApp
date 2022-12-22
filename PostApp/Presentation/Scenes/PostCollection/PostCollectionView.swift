@@ -6,7 +6,7 @@ final class PostCollectionView: UIViewController {
     
     private let viewModel = PostCollectionViewModel()
     
-    private let postCollectionView: UICollectionView = {
+    private let postCollection: UICollectionView = {
         let collectionViewFlowLayout = UICollectionViewFlowLayout()
         collectionViewFlowLayout.scrollDirection = .vertical
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewFlowLayout)
@@ -29,36 +29,36 @@ final class PostCollectionView: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         viewModel.getData { [weak self] in
-            self?.postCollectionView.reloadData()
+            self?.postCollection.reloadData()
         }
     }
     
     
     private func setDelegates() {
-        postCollectionView.delegate = self
-        postCollectionView.dataSource = self
-        postCollectionView.prefetchDataSource = self
-        postCollectionView.alwaysBounceVertical = false
-        postCollectionView.register(PostCollectionViewCell.self, forCellWithReuseIdentifier: PostCollectionViewCell.identifier)
+        postCollection.delegate = self
+        postCollection.dataSource = self
+        postCollection.prefetchDataSource = self
+        postCollection.alwaysBounceVertical = false
+        postCollection.register(PostCollectionViewCell.self, forCellWithReuseIdentifier: PostCollectionViewCell.identifier)
     }
 }
 
 extension PostCollectionView {
     private func layout() {
-        postCollectionView.translatesAutoresizingMaskIntoConstraints = false
-        view.addSubview(postCollectionView)
+        postCollection.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(postCollection)
         
         NSLayoutConstraint.activate([
-            postCollectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            postCollectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
-            postCollectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-            postCollectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            postCollection.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            postCollection.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
+            postCollection.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
+            postCollection.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
         ])
     }
     
     private func style() {
         view.backgroundColor = .systemBackground
-        postCollectionView.backgroundColor = .systemBackground
+        postCollection.backgroundColor = .systemBackground
     }
 }
 
@@ -68,7 +68,7 @@ extension PostCollectionView: UICollectionViewDataSource {
         return viewModel.posts.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = postCollectionView.dequeueReusableCell(withReuseIdentifier: PostCollectionViewCell.identifier, for: indexPath) as? PostCollectionViewCell
+        guard let cell = postCollection.dequeueReusableCell(withReuseIdentifier: PostCollectionViewCell.identifier, for: indexPath) as? PostCollectionViewCell
         else { preconditionFailure() }
         let postAtIndexPath = viewModel.posts[indexPath.row]
         cell.configureCell(postPictureImageUrl: postAtIndexPath.image, commentText: postAtIndexPath.text, dateOfpublish: postAtIndexPath.publishDate)
@@ -97,8 +97,8 @@ extension PostCollectionView: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width  = (postCollectionView.frame.width - ((postCardColoumnNumber + 1) * postCardSpacing)) / postCardColoumnNumber
-        let height  = (postCollectionView.frame.width * 0.37)
+        let width  = (postCollection.frame.width - ((postCardColoumnNumber + 1) * postCardSpacing)) / postCardColoumnNumber
+        let height  = (postCollection.frame.width * 0.37)
         return CGSize(width: width, height: height)
     }
 }
@@ -109,7 +109,7 @@ extension PostCollectionView: UICollectionViewDataSourcePrefetching {
             print(maxRow.row)
             if maxRow.row >= viewModel.posts.count - 25 {
                 viewModel.getData { [weak self] in
-                    self?.postCollectionView.reloadData()
+                    self?.postCollection.reloadData()
                 }
             }
         }
