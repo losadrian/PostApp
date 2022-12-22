@@ -105,7 +105,13 @@ class RequestBuilder {
         
         if withAuthentication {
 #warning("Should not store secrets on-device")
-            urlRequest.setValue("6384b8ee394ee23c54fb9ffb", forHTTPHeaderField: "app-id")
+    let appIdKey: [UInt8] = [109, 115, 37, 129, 152, 197, 87, 181, 252, 4, 176, 116, 247, 6, 175, 61, 205, 247, 131, 126, 99, 72, 107, 85, 91, 64, 29, 181, 250, 253, 50, 208, 207, 61, 132, 17, 146, 52, 156, 94, 248, 195, 229, 28, 90, 46, 13, 55]
+
+    var pureAppIdKey: String {
+        return String(bytes: appIdKey.deobfuscated,
+            encoding: .utf8) ?? ""
+    }
+    urlRequest.setValue(pureAppIdKey, forHTTPHeaderField: "app-id")
         }
         
         if let modelData = httpBodyModelData {
