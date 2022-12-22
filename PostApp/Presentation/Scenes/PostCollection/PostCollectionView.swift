@@ -4,7 +4,16 @@ final class PostCollectionView: UIViewController {
     private let postCardSpacing: CGFloat = 20.0
     private let postCardColoumnNumber: CGFloat = 2.0
     
-    private let viewModel = PostCollectionViewModel()
+    private let viewModel: PostCollectionViewModel
+    
+    init(postCollectionViewModel: PostCollectionViewModel) {
+        self.viewModel = postCollectionViewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     private let postCollection: UICollectionView = {
         let collectionViewFlowLayout = UICollectionViewFlowLayout()
