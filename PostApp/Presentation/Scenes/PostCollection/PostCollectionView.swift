@@ -3,6 +3,8 @@ import UIKit
 final class PostCollectionView: UIViewController {
     private var textLabel: UILabel = .init(frame: .zero)
     
+    private let viewModel = PostCollectionViewModel()
+    
     override func loadView() {
         super.loadView()
         layout()
@@ -14,6 +16,12 @@ final class PostCollectionView: UIViewController {
         
         navigationItem.title = "PostCollectionView"
         textLabel.text = "PostCollectionView"
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        //TODO: use with collectionView
+//        viewModel.getData { }
     }
 }
 
