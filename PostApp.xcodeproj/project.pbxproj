@@ -25,6 +25,8 @@
 		985302F02954579D00F7BAFD /* PostApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985302EF2954579D00F7BAFD /* PostApiModel.swift */; };
 		985302F2295457BD00F7BAFD /* PostListByPageResponseApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985302F1295457BD00F7BAFD /* PostListByPageResponseApiModel.swift */; };
 		985302F7295462BC00F7BAFD /* PostCollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985302F6295462BC00F7BAFD /* PostCollectionViewModel.swift */; };
+		985302F9295465E000F7BAFD /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985302F8295465E000F7BAFD /* PostCollectionViewCell.swift */; };
+		985302FC2954662800F7BAFD /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985302FB2954662800F7BAFD /* ReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		985302EF2954579D00F7BAFD /* PostApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostApiModel.swift; sourceTree = "<group>"; };
 		985302F1295457BD00F7BAFD /* PostListByPageResponseApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListByPageResponseApiModel.swift; sourceTree = "<group>"; };
 		985302F6295462BC00F7BAFD /* PostCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewModel.swift; sourceTree = "<group>"; };
+		985302F8295465E000F7BAFD /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
+		985302FB2954662800F7BAFD /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 		985302C6295452C200F7BAFD /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				985302FA2954661E00F7BAFD /* Protocols */,
 				985302B2295451DC00F7BAFD /* AppDelegate.swift */,
 				985302B4295451DC00F7BAFD /* SceneDelegate.swift */,
 				985302C7295452F700F7BAFD /* Resources */,
@@ -128,6 +133,7 @@
 			children = (
 				985302B6295451DC00F7BAFD /* PostCollectionView.swift */,
 				985302F6295462BC00F7BAFD /* PostCollectionViewModel.swift */,
+				985302F8295465E000F7BAFD /* PostCollectionViewCell.swift */,
 			);
 			path = PostCollection;
 			sourceTree = "<group>";
@@ -173,6 +179,14 @@
 				985302E9295454E700F7BAFD /* PostRepository.swift */,
 			);
 			path = NetWorkingProtocols;
+			sourceTree = "<group>";
+		};
+		985302FA2954661E00F7BAFD /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				985302FB2954662800F7BAFD /* ReusableView.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,9 +268,11 @@
 				985302F7295462BC00F7BAFD /* PostCollectionViewModel.swift in Sources */,
 				985302B5295451DC00F7BAFD /* SceneDelegate.swift in Sources */,
 				985302F2295457BD00F7BAFD /* PostListByPageResponseApiModel.swift in Sources */,
+				985302FC2954662800F7BAFD /* ReusableView.swift in Sources */,
 				985302EC295456D800F7BAFD /* ErrorResponseApiModel.swift in Sources */,
 				985302DB2954541100F7BAFD /* PathBuilder.swift in Sources */,
 				985302E42954541100F7BAFD /* RequestBuilder.swift in Sources */,
+				985302F9295465E000F7BAFD /* PostCollectionViewCell.swift in Sources */,
 				985302E52954541100F7BAFD /* APIClient.swift in Sources */,
 				985302EE2954577D00F7BAFD /* OwnerApiModel.swift in Sources */,
 				985302E72954546700F7BAFD /* APIError.swift in Sources */,
