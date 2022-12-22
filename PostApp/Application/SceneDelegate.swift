@@ -8,7 +8,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         let window = UIWindow(windowScene: windowScene)
-        let postCollectionViewController = ViewController()
+        let postCollectionViewController = PostCollectionView()
         let navigationController = UINavigationController(rootViewController: postCollectionViewController)
         window.rootViewController = navigationController
         self.window = window
